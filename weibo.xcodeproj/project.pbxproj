@@ -110,6 +110,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B6602A571E641AA000A8197B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		B6602A581E641AAB00A8197B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */,
+				B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */,
+				B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */,
+				B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */,
+				B6FD0A851E602A2900DAB8D2 /* Info.plist */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B6602A591E641AB800A8197B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B6602A5A1E641ABB00A8197B /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		B6602A5B1E641AC100A8197B /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Macro;
+			sourceTree = "<group>";
+		};
+		B6602A5C1E641AE900A8197B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		B6602A5D1E641AF300A8197B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		B6FD0A6D1E602A2900DAB8D2 = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +189,13 @@
 		B6FD0A781E602A2900DAB8D2 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
-				B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */,
-				B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */,
-				B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */,
-				B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */,
-				B6FD0A851E602A2900DAB8D2 /* Info.plist */,
+				B6602A581E641AAB00A8197B /* AppDelegate */,
+				B6602A571E641AA000A8197B /* Components */,
+				B6602A5B1E641AC100A8197B /* Macro */,
+				B6602A5D1E641AF300A8197B /* Extension */,
+				B6602A5A1E641ABB00A8197B /* Vendor */,
+				B6602A591E641AB800A8197B /* Utils */,
+				B6602A5C1E641AE900A8197B /* Base */,
 			);
 			path = weibo;
 			sourceTree = "<group>";

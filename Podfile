@@ -8,6 +8,7 @@ target 'weibo' do
   pod 'YTKNetwork', '~> 2.0.0'
   pod 'Mantle', '~> 2.0.3'
   pod 'MBProgressHUD', '~>0.9.1'
+  pod 'SnapKit', '~> 3.0.2'
 
   # Pods for weibo
 

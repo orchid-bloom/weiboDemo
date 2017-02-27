@@ -12,7 +12,8 @@ import RDVTabBarControllerSwift
 class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
 
     var tabBarViewController : RDVTabBarController?
-    var tabBarIcons          = [["首页","tabbar_home","tabbar_home_selected"], ["消息","tabbar_message_center","tabbar_message_center_selected"], ["","tabbar_compose_background_icon_add","tabbar_compose_background_icon_addselect"], ["发现","tabbar_discover","tabbar_discover_selected"],["我","tabbar_profile","tabbar_profile_selected"]]
+    var tabBarIcons   = [["首页","tabbar_home","tabbar_home_selected"], ["消息","tabbar_message_center","tabbar_message_center_selected"], ["","tabbar_compose_background_icon_add","tabbar_compose_background_icon_addselect"], ["发现","tabbar_discover","tabbar_discover_selected"],["我","tabbar_profile","tabbar_profile_selected"]]
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
         setTabBarController()
     }
 
+    /* setTabBarController */
     fileprivate func setTabBarController() {
         var viewControllers = [UINavigationController]()
         for _ in tabBarIcons {
@@ -51,6 +53,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
             i += 1;
         }
     }
+    /* RDVTabBarControllerDelegate */
     func tabBarController(_ tabBarController: RDVTabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if viewController.isKind(of: DTNavigationController.classForCoder()) {
             let uNC = viewController as! DTNavigationController

@@ -34,7 +34,6 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
         }
         self.addChildViewController(tabBarViewController)
         view.addSubview(tabBarViewController.view)
-        
         let tabBar = tabBarViewController.tabBar
         var i = 0;
         for item in tabBar.items! {
@@ -51,7 +50,6 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
             item.setNeedsDisplay()
             i += 1;
         }
-        
     }
     func tabBarController(_ tabBarController: RDVTabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if viewController.isKind(of: DTNavigationController.classForCoder()) {
@@ -82,5 +80,4 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
     func tabBarController(_ tabBarController: RDVTabBarController, didSelectViewController viewController: UIViewController) {
         
     }
-
 }

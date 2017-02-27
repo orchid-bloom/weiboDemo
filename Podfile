@@ -5,10 +5,10 @@ target 'weibo' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'SDWebImage', '~> 4.0.0'
-  pod 'YTKNetwork', '~> 2.0.0'
-  pod 'Mantle', '~> 2.0.3'
   pod 'MBProgressHUD', '~>0.9.1'
-  pod 'SnapKit', '~> 3.0.2'
+  pod 'FCUUID', '~> 1.1.4'
+  pod 'RDVTabBarControllerSwift'
+  pod 'SSKeychain'
 
   # Pods for weibo
 

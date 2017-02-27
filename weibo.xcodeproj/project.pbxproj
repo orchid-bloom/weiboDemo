@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7DDFAA8601BADFEF0608AA65 /* Pods_weiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */; };
+		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
+		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
 		B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */; };
 		B6FD0A811E602A2900DAB8D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		A9BF9E2B0407A55DF6A7B5F6 /* Pods-weiboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6602A5E1E641BCA00A8197B /* DTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTViewController.swift; sourceTree = "<group>"; };
+		B6602A601E641BEE00A8197B /* DTRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRootViewController.swift; sourceTree = "<group>"; };
 		B6FD0A761E602A2900DAB8D2 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */,
 				B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */,
+				B6602A601E641BEE00A8197B /* DTRootViewController.swift */,
 				B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */,
 				B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */,
 				B6FD0A851E602A2900DAB8D2 /* Info.plist */,
@@ -153,6 +158,7 @@
 		B6602A5C1E641AE900A8197B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B6602A5E1E641BCA00A8197B /* DTViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -504,6 +510,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
+				B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */,
 				B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
 			);

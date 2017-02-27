@@ -6,7 +6,7 @@ target 'weibo' do
   use_frameworks!
   pod 'SDWebImage', '~> 4.0.0'
   pod 'MBProgressHUD', '~>0.9.1'
-  pod 'FCUUID', '~> 1.1.4'
+#  pod 'FCUUID', '~> 1.1.4'
   pod 'RDVTabBarControllerSwift'
   pod 'SSKeychain'
 

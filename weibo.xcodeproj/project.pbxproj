@@ -48,6 +48,7 @@
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6602A5E1E641BCA00A8197B /* DTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTViewController.swift; sourceTree = "<group>"; };
 		B6602A601E641BEE00A8197B /* DTRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRootViewController.swift; sourceTree = "<group>"; };
+		B6602A661E64204400A8197B /* RDVTabBarControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RDVTabBarControllerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/weibo-eipsfnqkcbehpydzawziuncfseac/Build/Products/Debug-iphonesimulator/RDVTabBarControllerSwift/RDVTabBarControllerSwift.framework"; sourceTree = "<group>"; };
 		B6FD0A761E602A2900DAB8D2 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		A95F52E466B86D6ED51903DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6602A661E64204400A8197B /* RDVTabBarControllerSwift.framework */,
 				44D54A8C3F493D5DFB4D3B9E /* Pods_weibo.framework */,
 				C5F6A546240F0266C26778E2 /* Pods_weiboTests.framework */,
 				AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */,

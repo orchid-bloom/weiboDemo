@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7DDFAA8601BADFEF0608AA65 /* Pods_weiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */; };
+		A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723331E6461D100435E51 /* DTHomeViewController.swift */; };
+		A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723351E6461E200435E51 /* DTMessageViewController.swift */; };
+		A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723371E6461FD00435E51 /* DTPushViewController.swift */; };
+		A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723391E64620A00435E51 /* DTFineViewController.swift */; };
+		A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337233B1E64621500435E51 /* DTMyViewController.swift */; };
+		A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39545D31E64581000F331B6 /* DTNavigationController.swift */; };
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
 		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
@@ -43,6 +49,12 @@
 		44D54A8C3F493D5DFB4D3B9E /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51326D7E9A88C9080CB5A23C /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 		59FE4789F76042082064AC62 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
+		A33723331E6461D100435E51 /* DTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeViewController.swift; sourceTree = "<group>"; };
+		A33723351E6461E200435E51 /* DTMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMessageViewController.swift; sourceTree = "<group>"; };
+		A33723371E6461FD00435E51 /* DTPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPushViewController.swift; sourceTree = "<group>"; };
+		A33723391E64620A00435E51 /* DTFineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTFineViewController.swift; sourceTree = "<group>"; };
+		A337233B1E64621500435E51 /* DTMyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMyViewController.swift; sourceTree = "<group>"; };
+		A39545D31E64581000F331B6 /* DTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
 		A9BF9E2B0407A55DF6A7B5F6 /* Pods-weiboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +117,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A39545CE1E6457A000F331B6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A33723331E6461D100435E51 /* DTHomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		A39545CF1E6457A700F331B6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A33723351E6461E200435E51 /* DTMessageViewController.swift */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		A39545D01E6457AD00F331B6 /* Fine */ = {
+			isa = PBXGroup;
+			children = (
+				A33723391E64620A00435E51 /* DTFineViewController.swift */,
+			);
+			name = Fine;
+			sourceTree = "<group>";
+		};
+		A39545D11E6457C100F331B6 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				A33723371E6461FD00435E51 /* DTPushViewController.swift */,
+			);
+			name = Push;
+			sourceTree = "<group>";
+		};
+		A39545D21E6457CD00F331B6 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				A337233B1E64621500435E51 /* DTMyViewController.swift */,
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
 		A95F52E466B86D6ED51903DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +171,11 @@
 		B6602A571E641AA000A8197B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A39545CE1E6457A000F331B6 /* Home */,
+				A39545CF1E6457A700F331B6 /* Message */,
+				A39545D11E6457C100F331B6 /* Push */,
+				A39545D01E6457AD00F331B6 /* Fine */,
+				A39545D21E6457CD00F331B6 /* My */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -129,6 +186,7 @@
 				B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */,
 				B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */,
 				B6602A601E641BEE00A8197B /* DTRootViewController.swift */,
+				A39545D31E64581000F331B6 /* DTNavigationController.swift */,
 				B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */,
 				B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */,
 				B6FD0A851E602A2900DAB8D2 /* Info.plist */,
@@ -412,7 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		80BC3208DDF9F285FFF6259D /* [CP] Check Pods Manifest.lock */ = {
@@ -427,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9566C8A73906508B8B1CC031 /* [CP] Copy Pods Resources */ = {
@@ -472,7 +530,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DFDB4160004DE0E6B6CE9F48 /* [CP] Copy Pods Resources */ = {
@@ -512,10 +570,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
+				A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */,
 				B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */,
 				B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */,
+				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
+				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
+				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
+				A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

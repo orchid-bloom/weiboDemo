@@ -13,6 +13,7 @@
 		A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723371E6461FD00435E51 /* DTPushViewController.swift */; };
 		A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723391E64620A00435E51 /* DTFineViewController.swift */; };
 		A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A337233B1E64621500435E51 /* DTMyViewController.swift */; };
+		A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35579E41E6476B3004063DD /* DTBaseTableViewViewController.swift */; };
 		A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39545D31E64581000F331B6 /* DTNavigationController.swift */; };
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
 		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
@@ -54,6 +55,7 @@
 		A33723371E6461FD00435E51 /* DTPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPushViewController.swift; sourceTree = "<group>"; };
 		A33723391E64620A00435E51 /* DTFineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTFineViewController.swift; sourceTree = "<group>"; };
 		A337233B1E64621500435E51 /* DTMyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMyViewController.swift; sourceTree = "<group>"; };
+		A35579E41E6476B3004063DD /* DTBaseTableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTBaseTableViewViewController.swift; sourceTree = "<group>"; };
 		A39545D31E64581000F331B6 /* DTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
 		A9BF9E2B0407A55DF6A7B5F6 /* Pods-weiboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				B6602A5E1E641BCA00A8197B /* DTViewController.swift */,
+				A35579E41E6476B3004063DD /* DTBaseTableViewViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */,
+				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
 				A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */,
 				B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */,

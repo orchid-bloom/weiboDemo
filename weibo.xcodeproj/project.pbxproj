@@ -17,6 +17,8 @@
 		A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39545D31E64581000F331B6 /* DTNavigationController.swift */; };
 		B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */; };
 		B6294D291E651BD4007C4945 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D281E651BD4007C4945 /* Constant.swift */; };
+		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
+		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
 		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
@@ -64,6 +66,8 @@
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 		B6294D281E651BD4007C4945 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
+		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
 		B6602A5E1E641BCA00A8197B /* DTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTViewController.swift; sourceTree = "<group>"; };
 		B6602A601E641BEE00A8197B /* DTRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRootViewController.swift; sourceTree = "<group>"; };
 		B6602A661E64204400A8197B /* RDVTabBarControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RDVTabBarControllerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/weibo-eipsfnqkcbehpydzawziuncfseac/Build/Products/Debug-iphonesimulator/RDVTabBarControllerSwift/RDVTabBarControllerSwift.framework"; sourceTree = "<group>"; };
@@ -174,6 +178,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B6430EC71E6576BA00615B2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6430EC81E6576E400615B2E /* DTPage.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B6602A571E641AA000A8197B /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,8 +237,10 @@
 		B6602A5C1E641AE900A8197B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B6430EC71E6576BA00615B2E /* Model */,
 				B6602A5E1E641BCA00A8197B /* DTViewController.swift */,
 				A35579E41E6476B3004063DD /* DTBaseTableViewViewController.swift */,
+				B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -581,6 +595,7 @@
 			files = (
 				A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */,
 				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
+				B6430EC91E6576E400615B2E /* DTPage.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
 				A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */,
 				B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */,
@@ -589,6 +604,7 @@
 				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
 				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
 				B6294D291E651BD4007C4945 /* Constant.swift in Sources */,
+				B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */,
 				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
 				A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */,

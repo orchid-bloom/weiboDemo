@@ -8,16 +8,30 @@
 
 import UIKit
 
-class DTBaseTableViewViewController: DTViewController {
+class DTBaseTableViewViewController: DTViewController ,UITableViewDelegate ,UITableViewDataSource{
 
-    lazy var tableView = UITableView()
-    
+    var tableView : UITableView?
+    var dataList  = [Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    fileprivate func setTableView() {
+        tableView = UITableView(frame: CGRect(x: 0, y: CustomHeaderHeight, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight))
+        tableView?.delegate = self
+        tableView?.dataSource = self
+    }
 
- 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "")
+        if !(cell != nil) {
+            cell = UITableViewCell()
+        }
+        return cell!
+    }
 
 }

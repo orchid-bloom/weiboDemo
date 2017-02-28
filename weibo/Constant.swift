@@ -20,6 +20,6 @@ import UIKit
 
 let ScreenWidth  = UIScreen.main.bounds.size.width
 let ScreenHeight = UIScreen.main.bounds.size.height
-let TabBarHeight =      49.0
-let CustomHeaderHeight = 64.0
-let NavigationBarHeight = 44.0
+let TabBarHeight         = CGFloat(49.0)
+let CustomHeaderHeight   = CGFloat(64.0)
+let NavigationBarHeight  = CGFloat(44.0)

@@ -16,11 +16,10 @@ class DTHomeViewController: DTViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "home"
     }
     override func styleNavBar (){
-        self.title = "home"
-        view.addSubview(self.customHeadView)
+        super.styleNavBar()
     }
 
 }

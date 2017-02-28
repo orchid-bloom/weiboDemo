@@ -48,6 +48,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
         self.addChildViewController(tabBarViewController)
         view.addSubview(tabBarViewController.view)
         let tabBar = tabBarViewController.tabBar
+        tabBar.backgroundView.backgroundColor = UIColor.white
         i = 0;
         for item in tabBar.items! {
             let subArr = tabBarIcons[i]
@@ -66,7 +67,6 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
     }
     /* RDVTabBarControllerDelegate */
     func tabBarController(_ tabBarController: RDVTabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-     
         return true
     }
     func tabBarController(_ tabBarController: RDVTabBarController, didSelectViewController viewController: UIViewController) {
@@ -98,8 +98,5 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
                 break
             }
         }
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        MBProgressHUD.showToastWithString("Successed")
     }
 }

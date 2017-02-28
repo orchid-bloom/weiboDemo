@@ -17,11 +17,10 @@ class DTFineViewController: DTViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Fine"
     }
     override func styleNavBar (){
-        self.title = "Fine"
-        view.addSubview(self.customHeadView)
+        super.styleNavBar()
     }
 
 }

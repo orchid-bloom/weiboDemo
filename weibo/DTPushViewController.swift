@@ -21,7 +21,6 @@ class DTPushViewController: DTViewController {
     }
     override func styleNavBar (){
         self.title = "Push"
-        view.addSubview(self.customHeadView)
     }
 
 }

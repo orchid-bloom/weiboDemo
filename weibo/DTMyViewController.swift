@@ -17,11 +17,11 @@ class DTMyViewController: DTViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "我"
         
     }
     override func styleNavBar (){
-        self.title = "Me"
-        view.addSubview(self.customHeadView)
+        super.styleNavBar()
     }
 
 }

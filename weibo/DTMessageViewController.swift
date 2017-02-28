@@ -17,11 +17,11 @@ class DTMessageViewController: DTViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "消息"
         
     }
     override func styleNavBar (){
-        self.title = "Message"
-        view.addSubview(self.customHeadView)
+        super.styleNavBar()
     }
 
 }

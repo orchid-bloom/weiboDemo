@@ -8,6 +8,7 @@
 
 import UIKit
 import RDVTabBarControllerSwift
+import MBProgressHUD
 
 class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
 
@@ -17,7 +18,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setTabBarController()
     }
 
@@ -82,5 +83,8 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
     }
     func tabBarController(_ tabBarController: RDVTabBarController, didSelectViewController viewController: UIViewController) {
         
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        MBProgressHUD.showToastWithString("Successed")
     }
 }

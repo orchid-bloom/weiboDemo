@@ -10,7 +10,14 @@ import UIKit
 
 class DTViewController: UIViewController {
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    
+    
+    /////自定义导航栏
     lazy var customNavigationBar :UINavigationBar = {[weak self] ()->UINavigationBar in
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: ScreenHeight))
         let newItem   = UINavigationItem()
@@ -25,23 +32,19 @@ class DTViewController: UIViewController {
         let barButtonItem = UIBarButtonItem(customView: button)
         newItem.leftBarButtonItems = [barButtonItem]
         return newNavBar
-    }()
-   lazy var customStatusBar:UIView = { [weak self] ()-> UIView in
+        }()
+    //自定义状态栏
+    lazy var customStatusBar:UIView = {()-> UIView in
         let bar = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 20))
         return bar
     }()
-   lazy  var customHeadView:UIView = {[weak self] ()-> UIView in
+    ///自定义Head view
+    lazy  var customHeadView:UIView = {[weak self] ()-> UIView in
         let customHeadView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 64))
         customHeadView.addSubview((self?.customStatusBar)!)
         customHeadView.addSubview((self?.customNavigationBar)!)
         return customHeadView
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
+        }()
     //pragma mark -- styleNavBar
      func styleNavBar (){
         

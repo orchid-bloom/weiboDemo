@@ -9,6 +9,10 @@ target 'weibo' do
   pod 'FCUUID', '~> 1.1.4'
   pod 'RDVTabBarControllerSwift'
   pod 'SSKeychain'
+  pod 'Mantle'
+  pod 'MJRefresh'
+  pod 'SDWebImage', '~> 4.0.0'
+  pod 'EDColor', '~> 1.0.0'
 
   # Pods for weibo
 

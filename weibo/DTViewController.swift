@@ -45,7 +45,7 @@ class DTViewController: UIViewController {
         view.addSubview(self.customHeadView)
     }
      func backTapped (sender:Any) {
-//        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
      func createCustomNavigationBar ()->(UINavigationBar) {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))

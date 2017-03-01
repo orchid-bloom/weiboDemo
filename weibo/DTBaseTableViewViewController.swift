@@ -17,14 +17,14 @@ class DTBaseTableViewViewController: DTViewController ,UITableViewDelegate ,UITa
 
     }
 
-    fileprivate func setTableView() {
+    func setTableView() {
         tableView = UITableView(frame: CGRect(x: 0, y: CustomHeaderHeight, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight))
         tableView?.delegate = self
         tableView?.dataSource = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 0
+         return dataList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "")

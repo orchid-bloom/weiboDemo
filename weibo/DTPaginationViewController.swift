@@ -14,16 +14,28 @@ enum RefreshType {
     case  FooterRefresh
 }
 
-class DTPaginationViewController: DTViewController {
+class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableViewDataSource{
 
-    lazy var refreshTableView = UITableView()
+    lazy var refreshTableView :UITableView = {[weak self] ()->UITableView in
+        let tableView = UITableView(frame: CGRect(x: 0, y: CustomHeaderHeight, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight - TabBarHeight), style: .plain)
+        self?.refreshTableViewRegister()
+        return tableView
+    }()
     lazy var dataList         = [Any]()
     lazy var page             = DTPage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.addSubview(refreshTableView)
+        refreshTableView.delegate   = self
+        refreshTableView.dataSource = self
     }
+    //子类重写修改属性
+    func refreshTableViewRegister() {
+        
+    }
+    // MARK: - refresh
     //添加下拉刷新
     func addHeadRefresh() {
         let headRefresh = MJRefreshHeader(refreshingTarget: self, refreshingAction: #selector(headerRefreshing(sender:)))
@@ -87,4 +99,16 @@ class DTPaginationViewController: DTViewController {
     func beforeStartRefresh() {
     
     }
+    // MARK: - tableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataList.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "")
+        if !(cell != nil) {
+            cell = UITableViewCell()
+        }
+        return cell!
+    }
+
 }

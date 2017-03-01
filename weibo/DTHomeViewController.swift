@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DTHomeViewController: DTViewController {
+class DTHomeViewController: DTPaginationViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

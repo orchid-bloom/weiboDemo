@@ -13,6 +13,7 @@ target 'weibo' do
   pod 'MJRefresh'
   pod 'SDWebImage', '~> 4.0.0'
   pod 'EDColor', '~> 1.0.0'
+  pod 'Alamofire', '~> 4.4'
 
   # Pods for weibo
 

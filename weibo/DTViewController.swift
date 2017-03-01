@@ -18,7 +18,6 @@ class DTViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     //自定义导航栏
@@ -29,6 +28,7 @@ class DTViewController: UIViewController {
     //自定义状态栏
     lazy var customStatusBar:UIView = {()-> UIView in
         let bar = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 20))
+        bar.backgroundColor = UIColor().navigationColor
         return bar
     }()
     ///自定义Head view
@@ -49,7 +49,7 @@ class DTViewController: UIViewController {
     }
      func createCustomNavigationBar ()->(UINavigationBar) {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
-        newNavBar.barTintColor = UIColor.white
+        newNavBar.barTintColor = UIColor().navigationColor
         newNavBar.shadowImage = nil
         let newItem   = UINavigationItem()
         newItem.title = self.title
@@ -61,7 +61,7 @@ class DTViewController: UIViewController {
     }
      func createCustomHeadView()->(UIView) {
         let customHeadView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 64))
-        customHeadView.backgroundColor = UIColor.white
+        customHeadView.backgroundColor = UIColor().navigationColor
         return customHeadView
     }
      func backNavigationItem()-> (UIBarButtonItem) {

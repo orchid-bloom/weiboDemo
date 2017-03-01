@@ -16,10 +16,23 @@ class DTHomeViewController: DTPaginationViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "home"
+        self.title = "Tome"
     }
     override func styleNavBar (){
         super.styleNavBar()
     }
-
+    
+    override func createCustomNavigationBar ()->(UINavigationBar) {
+        let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
+        newNavBar.barTintColor = UIColor().navigationColor
+        let newItem   = UINavigationItem()
+        let titleLabel = UILabel()
+        titleLabel.text = self.title
+        titleLabel.font = DTFont.getFontWithFontType(.DTFontTypeA)
+        titleLabel.textColor = UIColor().navigationTitleColor
+        titleLabel.sizeToFit()
+        newItem.titleView = titleLabel
+        newNavBar.items = [newItem]
+        return newNavBar
+    }
 }

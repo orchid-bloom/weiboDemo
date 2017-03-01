@@ -48,7 +48,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
         self.addChildViewController(tabBarViewController)
         view.addSubview(tabBarViewController.view)
         let tabBar = tabBarViewController.tabBar
-        tabBar.backgroundView.backgroundColor = UIColor.white
+        tabBar.backgroundView.backgroundColor = UIColor().tabBarColor
         i = 0;
         for item in tabBar.items! {
             let subArr = tabBarIcons[i]
@@ -56,8 +56,8 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
             let selectImageName  = subArr[2];
             let unelectImage = UIImage.init(named: unelectImageName)
             let selectImage = UIImage.init(named: selectImageName)
-            item.unselectedTitleAttributes = [NSForegroundColorAttributeName:UIColor.black];
-            item.selectedTitleAttributes = [NSForegroundColorAttributeName:UIColor.black];
+            item.unselectedTitleAttributes = [NSForegroundColorAttributeName:UIColor().navigationTitleColor];
+            item.selectedTitleAttributes = [NSForegroundColorAttributeName:UIColor().navigationTitleColor];
             item.title      = subArr[0]
             item.titlePositionAdjustment = UIOffsetMake(0, 2)
             item.setFinishedSelectedImage(selectImage, unselectedImage: unelectImage)

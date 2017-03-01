@@ -44,7 +44,7 @@ class DTMessageViewController: DTViewController {
         button.setTitle("发现群", for: .highlighted)
         button.addTarget(self, action:#selector(backTapped(sender:)), for:.touchUpInside)
         button.setTitleColor(UIColor().navigationTitleColor, for: .normal)
-        button.setTitleColor(UIColor().AppFlashViewColor, for: .highlighted)
+        button.setTitleColor(UIColor().flashViewColor, for: .highlighted)
         button.titleLabel?.font = DTFont.getFontWithFontType(.DTFontTypeC)
         button.sizeToFit()
         let barButtonItem = UIBarButtonItem(customView: button)

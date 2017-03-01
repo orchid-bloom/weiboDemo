@@ -38,7 +38,7 @@ extension UIColor {
     var redColor:UIColor {
         return .init(hexString:"#f73226")
     }
-    var AppFlashViewColor:UIColor {
+    var flashViewColor:UIColor {
         return .init(hexString:"#ffa94c")
     }
     var flashTextColor:UIColor {

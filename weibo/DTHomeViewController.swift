@@ -22,6 +22,7 @@ class DTHomeViewController: DTPaginationViewController {
         super.styleNavBar()
     }
     
+    // MARK: - override
     override func createCustomNavigationBar ()->(UINavigationBar) {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
         newNavBar.barTintColor = UIColor().navigationColor
@@ -32,7 +33,35 @@ class DTHomeViewController: DTPaginationViewController {
         titleLabel.textColor = UIColor().navigationTitleColor
         titleLabel.sizeToFit()
         newItem.titleView = titleLabel
+        newItem.leftBarButtonItems = [self.backNavigationItem()]
+        newItem.rightBarButtonItems = [self.addCustomRightBarButtonItem()]
         newNavBar.items = [newItem]
         return newNavBar
+    }
+    override func backNavigationItem()-> (UIBarButtonItem) {
+        let navBackImage = UIImage.init(named: "navigationbar_friendattention")
+        let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted")
+        let button = UIButton(type:.custom)
+        button.setImage(navBackImage, for: .normal)
+        button.setImage(navBackImageHighlight, for: .highlighted)
+        button.addTarget(self, action:#selector(backTapped(sender:)), for:.touchUpInside)
+        button.sizeToFit()
+        let barButtonItem = UIBarButtonItem(customView: button)
+        return barButtonItem
+    }
+    override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
+        let backBtn = UIButton(type: .custom)
+        backBtn.setImage(UIImage.init(named: "navigationbar_icon_radar"), for: .normal)
+        backBtn.setImage(UIImage.init(named: "navigationbar_icon_radar_highlighted"), for: .highlighted)
+        backBtn.addTarget(self, action: #selector(customItemClicked), for: .touchUpInside)
+        backBtn.sizeToFit()
+        let barButtonItem = UIBarButtonItem(customView: backBtn)
+        return barButtonItem
+    }
+    override func backTapped (sender:Any) {
+        
+    }
+    override func customItemClicked() {
+        
     }
 }

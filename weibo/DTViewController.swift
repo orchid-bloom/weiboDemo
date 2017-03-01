@@ -68,7 +68,6 @@ class DTViewController: UIViewController {
         let navBackImage = UIImage.init(named: "hotweibo_back_icon")
         let navBackImageHighlight = UIImage.init(named: "hotweibo_back_icon_highlighted")
         let button = UIButton(type:.custom)
-        button.setTitle("返回", for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: (navBackImage?.size.width)!, height: (navBackImage?.size.height)!)
         button.setImage(navBackImage, for: .normal)
         button.setImage(navBackImageHighlight, for: .highlighted)
@@ -77,19 +76,20 @@ class DTViewController: UIViewController {
         return barButtonItem
     }
     ///自定义返回按钮点击事件，子类实现
-    func customBackItemClicked() {
+    func customItemClicked() {
         
     }
-    ///添加自定义返回按钮
-    func addCustomBackBarButtonItem() {
+    ///添加自定义BarButton按钮
+    func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
         let backBtn = UIButton(type: .custom)
         backBtn.frame.size = (UIImage.init(named: "hotweibo_back_icon")?.size)!;
         backBtn.setImage(UIImage.init(named: "hotweibo_back_icon"), for: .normal)
-        backBtn.addTarget(self, action: #selector(customBackItemClicked), for: .touchUpInside)
+        backBtn.addTarget(self, action: #selector(customItemClicked), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: backBtn)
-        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        negativeSpacer.width = -10;
-        self.navigationItem.leftBarButtonItems = [negativeSpacer, barButtonItem,];
+//        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+//        negativeSpacer.width = -10;
+//        self.navigationItem.rightBarButtonItems = [barButtonItem,negativeSpacer];
+        return barButtonItem
     }
     ///移除自定义返回按钮
     func removeCustomBackBarButtonItem() {

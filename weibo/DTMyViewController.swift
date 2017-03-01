@@ -33,7 +33,23 @@ class DTMyViewController: DTViewController {
         titleLabel.textColor = UIColor().navigationTitleColor
         titleLabel.sizeToFit()
         newItem.titleView = titleLabel
+        newItem.leftBarButtonItems = [self.backNavigationItem()]
+        newItem.rightBarButtonItems = [self.addCustomRightBarButtonItem()]
         newNavBar.items = [newItem]
         return newNavBar
+    }
+    override func backNavigationItem()-> (UIBarButtonItem) {
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: nil, lightImage: nil, title: "添加好友", target: self, action: #selector(backTapped(sender:)))
+        return barButtonItem
+    }
+    override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: nil, lightImage: nil, title: "设置", target: self, action: #selector(customItemClicked))
+        return barButtonItem
+    }
+    override func backTapped (sender:Any) {
+        print("message backTapped")
+    }
+    override func customItemClicked() {
+        print("message customItemClicked")
     }
 }

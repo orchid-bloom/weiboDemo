@@ -39,7 +39,7 @@ class DTMessageViewController: DTViewController {
         return newNavBar
     }
     override func backNavigationItem()-> (UIBarButtonItem) {
-        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: UIImage(), lightImage: UIImage(), title: "发现群", target: self, action: #selector(backTapped(sender:)))
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: nil, lightImage: nil, title: "发现群", target: self, action: #selector(backTapped(sender:)))
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
@@ -47,7 +47,7 @@ class DTMessageViewController: DTViewController {
                 let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_newchat_highlight") else {
              return UIBarButtonItem()
         }
-        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(customItemClicked))
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(customItemClicked))
         return barButtonItem
     }
     override func backTapped (sender:Any) {

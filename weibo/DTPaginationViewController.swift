@@ -17,7 +17,7 @@ enum RefreshType {
 class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableViewDataSource{
 
     lazy var refreshTableView :UITableView = {[weak self] ()->UITableView in
-        let tableView = UITableView(frame: CGRect(x: 0, y: CustomHeaderHeight, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight - TabBarHeight), style: .plain)
+        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight - TabBarHeight), style: .plain)
         self?.refreshTableViewRegister()
         return tableView
     }()

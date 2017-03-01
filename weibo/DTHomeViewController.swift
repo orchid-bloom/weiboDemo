@@ -43,7 +43,7 @@ class DTHomeViewController: DTPaginationViewController {
                  let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted") else {
             return UIBarButtonItem()
         }
-        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(backTapped(sender:)))
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(backTapped(sender:)))
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
@@ -51,7 +51,7 @@ class DTHomeViewController: DTPaginationViewController {
                  let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_highlighted") else {
                 return UIBarButtonItem()
         }
-        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(customItemClicked))
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(customItemClicked))
         return barButtonItem
     }
     override func backTapped (sender:Any) {

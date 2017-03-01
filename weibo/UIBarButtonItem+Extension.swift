@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIBarButtonItem {
-    class func creatBarButtonItem(image:UIImage,lightImage:UIImage,title:String,target:Any,action:Selector)->UIBarButtonItem {
+    class func creatBarButtonItem(image:UIImage?,lightImage:UIImage?,title:String?,target:Any?,action:Selector)->UIBarButtonItem {
         let navBackImage          = image
         let navBackImageHighlight = lightImage
         let button                = UIButton(type:.custom)

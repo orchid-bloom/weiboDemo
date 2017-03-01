@@ -22,6 +22,7 @@
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
 		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
 		B6796BBE1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BBD1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift */; };
+		B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
 		B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */; };
 		B6FD0A811E602A2900DAB8D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		B6602A601E641BEE00A8197B /* DTRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRootViewController.swift; sourceTree = "<group>"; };
 		B6602A661E64204400A8197B /* RDVTabBarControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RDVTabBarControllerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/weibo-eipsfnqkcbehpydzawziuncfseac/Build/Products/Debug-iphonesimulator/RDVTabBarControllerSwift/RDVTabBarControllerSwift.framework"; sourceTree = "<group>"; };
 		B6796BBD1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMicroblogDetailViewController.swift; sourceTree = "<group>"; };
+		B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B6FD0A761E602A2900DAB8D2 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 		A39545CE1E6457A000F331B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B6796BC01E667EB80022F9D6 /* Model */,
+				B6796BBF1E667EAF0022F9D6 /* View */,
 				B6796BBC1E667D870022F9D6 /* Controller */,
 			);
 			name = Home;
@@ -140,7 +144,9 @@
 		A39545CF1E6457A700F331B6 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				A33723351E6461E200435E51 /* DTMessageViewController.swift */,
+				B6796BC31E667ED50022F9D6 /* Model */,
+				B6796BC21E667ECF0022F9D6 /* View */,
+				B6796BC11E667EC00022F9D6 /* Controller */,
 			);
 			name = Message;
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 		A39545D01E6457AD00F331B6 /* Fine */ = {
 			isa = PBXGroup;
 			children = (
-				A33723391E64620A00435E51 /* DTFineViewController.swift */,
+				B6796BC91E667F5C0022F9D6 /* Model */,
+				B6796BC81E667F5A0022F9D6 /* View */,
+				B6796BC71E667EFE0022F9D6 /* Controller */,
 			);
 			name = Fine;
 			sourceTree = "<group>";
@@ -156,7 +164,9 @@
 		A39545D11E6457C100F331B6 /* Push */ = {
 			isa = PBXGroup;
 			children = (
-				A33723371E6461FD00435E51 /* DTPushViewController.swift */,
+				B6796BC61E667EF30022F9D6 /* Model */,
+				B6796BC51E667EEA0022F9D6 /* View */,
+				B6796BC41E667EDE0022F9D6 /* Controller */,
 			);
 			name = Push;
 			sourceTree = "<group>";
@@ -164,7 +174,9 @@
 		A39545D21E6457CD00F331B6 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				A337233B1E64621500435E51 /* DTMyViewController.swift */,
+				B6796BCC1E667F6D0022F9D6 /* Model */,
+				B6796BCB1E667F6B0022F9D6 /* View */,
+				B6796BCA1E667F690022F9D6 /* Controller */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -251,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */,
+				B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -262,6 +275,108 @@
 				B6796BBD1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B6796BBF1E667EAF0022F9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B6796BC01E667EB80022F9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B6796BC11E667EC00022F9D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A33723351E6461E200435E51 /* DTMessageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B6796BC21E667ECF0022F9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B6796BC31E667ED50022F9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B6796BC41E667EDE0022F9D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A33723371E6461FD00435E51 /* DTPushViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B6796BC51E667EEA0022F9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B6796BC61E667EF30022F9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B6796BC71E667EFE0022F9D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A33723391E64620A00435E51 /* DTFineViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B6796BC81E667F5A0022F9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B6796BC91E667F5C0022F9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B6796BCA1E667F690022F9D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A337233B1E64621500435E51 /* DTMyViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B6796BCB1E667F6B0022F9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B6796BCC1E667F6D0022F9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B6FD0A6D1E602A2900DAB8D2 = {
@@ -605,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */,
+				B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */,
 				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
 				B6430EC91E6576E400615B2E /* DTPage.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,

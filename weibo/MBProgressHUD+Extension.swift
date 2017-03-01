@@ -10,6 +10,7 @@ import Foundation
 import MBProgressHUD
 
 extension MBProgressHUD {
+    
   class  public func showToastWithString( _ string:String)->() {
     let window = UIApplication.shared.windows.last
     let hud = MBProgressHUD.showAdded(to: window, animated: true)
@@ -26,3 +27,4 @@ extension MBProgressHUD {
     })
     }
 }
+ 

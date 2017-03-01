@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7DDFAA8601BADFEF0608AA65 /* Pods_weiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2F86A297F5B5A29B1A4E02 /* Pods_weiboUITests.framework */; };
+		A30243831E66EAE5002FE23E /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */; };
 		A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723331E6461D100435E51 /* DTHomeViewController.swift */; };
 		A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723351E6461E200435E51 /* DTMessageViewController.swift */; };
 		A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33723371E6461FD00435E51 /* DTPushViewController.swift */; };
@@ -58,6 +59,7 @@
 		44D54A8C3F493D5DFB4D3B9E /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51326D7E9A88C9080CB5A23C /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 		59FE4789F76042082064AC62 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
+		A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		A33723331E6461D100435E51 /* DTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeViewController.swift; sourceTree = "<group>"; };
 		A33723351E6461E200435E51 /* DTMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMessageViewController.swift; sourceTree = "<group>"; };
 		A33723371E6461FD00435E51 /* DTPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPushViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */,
 				B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */,
+				A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -633,7 +636,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		80BC3208DDF9F285FFF6259D /* [CP] Check Pods Manifest.lock */ = {
@@ -648,7 +651,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9566C8A73906508B8B1CC031 /* [CP] Copy Pods Resources */ = {
@@ -693,7 +696,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DFDB4160004DE0E6B6CE9F48 /* [CP] Copy Pods Resources */ = {
@@ -745,6 +748,7 @@
 				B6796BD31E66A4790022F9D6 /* DTFont.swift in Sources */,
 				B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */,
 				B6796BBE1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift in Sources */,
+				A30243831E66EAE5002FE23E /* UIBarButtonItem+Extension.swift in Sources */,
 				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
 				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
 				B6294D291E651BD4007C4945 /* Constant.swift in Sources */,

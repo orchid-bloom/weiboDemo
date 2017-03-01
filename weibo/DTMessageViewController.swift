@@ -39,30 +39,21 @@ class DTMessageViewController: DTViewController {
         return newNavBar
     }
     override func backNavigationItem()-> (UIBarButtonItem) {
-        let button = UIButton(type:.custom)
-        button.setTitle("发现群", for: .normal)
-        button.setTitle("发现群", for: .highlighted)
-        button.addTarget(self, action:#selector(backTapped(sender:)), for:.touchUpInside)
-        button.setTitleColor(UIColor().navigationTitleColor, for: .normal)
-        button.setTitleColor(UIColor().flashViewColor, for: .highlighted)
-        button.titleLabel?.font = DTFont.getFontWithFontType(.DTFontTypeC)
-        button.sizeToFit()
-        let barButtonItem = UIBarButtonItem(customView: button)
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: UIImage(), lightImage: UIImage(), title: "发现群", target: self, action: #selector(backTapped(sender:)))
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
-        let backBtn = UIButton(type: .custom)
-        backBtn.setImage(UIImage.init(named: "navigationbar_icon_newchat"), for: .normal)
-        backBtn.setImage(UIImage.init(named: "navigationbar_icon_newchat_highlight"), for: .highlighted)
-        backBtn.addTarget(self, action: #selector(customItemClicked), for: .touchUpInside)
-        backBtn.sizeToFit()
-        let barButtonItem = UIBarButtonItem(customView: backBtn)
+        guard   let navBackImage          = UIImage.init(named: "navigationbar_icon_newchat"),
+                let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_newchat_highlight") else {
+             return UIBarButtonItem()
+        }
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(customItemClicked))
         return barButtonItem
     }
     override func backTapped (sender:Any) {
-        
+        print("message backTapped")
     }
     override func customItemClicked() {
-        
+        print("message customItemClicked")
     }
 }

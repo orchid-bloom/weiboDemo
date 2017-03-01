@@ -39,23 +39,19 @@ class DTHomeViewController: DTPaginationViewController {
         return newNavBar
     }
     override func backNavigationItem()-> (UIBarButtonItem) {
-        let navBackImage = UIImage.init(named: "navigationbar_friendattention")
-        let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted")
-        let button = UIButton(type:.custom)
-        button.setImage(navBackImage, for: .normal)
-        button.setImage(navBackImageHighlight, for: .highlighted)
-        button.addTarget(self, action:#selector(backTapped(sender:)), for:.touchUpInside)
-        button.sizeToFit()
-        let barButtonItem = UIBarButtonItem(customView: button)
+        guard    let navBackImage          = UIImage.init(named: "navigationbar_friendattention"),
+                 let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted") else {
+            return UIBarButtonItem()
+        }
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(backTapped(sender:)))
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
-        let backBtn = UIButton(type: .custom)
-        backBtn.setImage(UIImage.init(named: "navigationbar_icon_radar"), for: .normal)
-        backBtn.setImage(UIImage.init(named: "navigationbar_icon_radar_highlighted"), for: .highlighted)
-        backBtn.addTarget(self, action: #selector(customItemClicked), for: .touchUpInside)
-        backBtn.sizeToFit()
-        let barButtonItem = UIBarButtonItem(customView: backBtn)
+        guard    let navBackImage          = UIImage.init(named: "navigationbar_icon_radar"),
+                 let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_highlighted") else {
+                return UIBarButtonItem()
+        }
+        let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: "", target: self, action: #selector(customItemClicked))
         return barButtonItem
     }
     override func backTapped (sender:Any) {

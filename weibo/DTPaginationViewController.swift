@@ -14,7 +14,8 @@ enum RefreshType {
     case  FooterRefresh
 }
 
-class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableViewDataSource{
+// MARK: - Property
+class DTPaginationViewController: DTViewController {
 
     lazy var refreshTableView :UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - TabBarHeight), style: .plain)
@@ -29,14 +30,23 @@ class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(refreshTableView)
+        addHeadRefresh()
+        refreshTableView.mj_header.beginRefreshing()
+        loadData()
     }
+}
+
+// MARK: - Refresh Method
+extension DTPaginationViewController {
     //子类重写修改属性
     func refreshTableViewRegister() {
         
     }
+    //加载数据
+    func loadData() {
 
-    
-    // MARK: - refresh
+    }
     //添加下拉刷新
     func addHeadRefresh() {
         let headRefresh = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(headerRefreshing(sender:)))
@@ -98,9 +108,15 @@ class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableV
         }
     }
     func beforeStartRefresh() {
-    
+        
     }
-    // MARK: - tableView
+}
+
+// MARK: - UITableView delegate
+extension DTPaginationViewController : UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count
     }
@@ -111,5 +127,4 @@ class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableV
         }
         return cell!
     }
-
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let cellID = "cellID"
+
 class DTHomeViewController: DTPaginationViewController {
 
     override func viewWillAppear(_ animated: Bool) {
@@ -18,14 +20,13 @@ class DTHomeViewController: DTPaginationViewController {
         super.viewDidLoad()
         self.title = "Tome"
         
-        view.addSubview(refreshTableView)
-        addHeadRefresh()
-        refreshTableView.mj_header.beginRefreshing()        
+    }
+    override func loadData() {
+        
     }
     override func styleNavBar (){
         super.styleNavBar()
     }
-    // MARK: - override
     override func createCustomNavigationBar ()->(UINavigationBar) {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
         newNavBar.barTintColor = UIColor().navigationColor
@@ -43,15 +44,15 @@ class DTHomeViewController: DTPaginationViewController {
     }
     override func backNavigationItem()-> (UIBarButtonItem) {
         guard    let navBackImage          = UIImage.init(named: "navigationbar_friendattention"),
-                 let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted") else {
-            return UIBarButtonItem()
+            let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted") else {
+                return UIBarButtonItem()
         }
         let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(backTapped(sender:)))
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
         guard    let navBackImage          = UIImage.init(named: "navigationbar_icon_radar"),
-                 let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_aperture") else {
+            let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_aperture") else {
                 return UIBarButtonItem()
         }
         let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(customItemClicked))
@@ -63,7 +64,10 @@ class DTHomeViewController: DTPaginationViewController {
     override func customItemClicked() {
         
     }
-    // MARK: - tableView
+
+}
+// MARK: - UITableView delegate
+extension DTHomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
@@ -78,5 +82,4 @@ class DTHomeViewController: DTPaginationViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
 }

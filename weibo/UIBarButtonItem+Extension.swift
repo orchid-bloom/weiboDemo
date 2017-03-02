@@ -19,7 +19,7 @@ extension UIBarButtonItem {
         button.setTitle(title, for: .normal)
         button.setTitle(title, for: .highlighted)
         button.setTitleColor(UIColor().navigationTitleColor, for: .normal)
-        button.setTitleColor(UIColor().flashViewColor, for: .highlighted)
+        button.setTitleColor(UIColor().orangeColor, for: .highlighted)
         button.titleLabel?.font = DTFont.getFontWithFontType(.DTFontTypeC)
         button.addTarget(target, action:action, for:.touchUpInside)
         button.sizeToFit()

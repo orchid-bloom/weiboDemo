@@ -53,4 +53,7 @@ extension UIColor {
     var secondaryTitleColor:UIColor {
         return .init(hexString:"#c0c0c0")
     }
+    var orangeColor:UIColor {
+        return .init(hexString:"#FE8201")
+    }
 }

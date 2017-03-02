@@ -17,10 +17,10 @@ class DTPushViewController: DTViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Push"
     }
     override func styleNavBar (){
-        self.title = "Push"
+        
     }
 
 }

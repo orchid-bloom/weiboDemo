@@ -16,9 +16,11 @@ enum RefreshType {
 
 class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableViewDataSource{
 
-    lazy var refreshTableView :UITableView = {[weak self] ()->UITableView in
-        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - CustomHeaderHeight - TabBarHeight), style: .plain)
-        self?.refreshTableViewRegister()
+    lazy var refreshTableView :UITableView = {
+        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - TabBarHeight), style: .plain)
+        tableView.delegate   = self
+        tableView.dataSource = self
+        self.refreshTableViewRegister()
         return tableView
     }()
     lazy var dataList         = [Any]()
@@ -27,23 +29,22 @@ class DTPaginationViewController: DTViewController ,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(refreshTableView)
-        refreshTableView.delegate   = self
-        refreshTableView.dataSource = self
     }
     //子类重写修改属性
     func refreshTableViewRegister() {
         
     }
+
+    
     // MARK: - refresh
     //添加下拉刷新
     func addHeadRefresh() {
-        let headRefresh = MJRefreshHeader(refreshingTarget: self, refreshingAction: #selector(headerRefreshing(sender:)))
+        let headRefresh = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(headerRefreshing(sender:)))
         refreshTableView.mj_header = headRefresh
     }
     //添加上托加载更多
     func addFooterRefresh() {
-        let footRefresh = MJRefreshFooter(refreshingTarget: self, refreshingAction: #selector(footRefreshing(sender:)))
+        let footRefresh = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(footRefreshing(sender:)))
         refreshTableView.mj_footer = footRefresh
     }
     //刷新

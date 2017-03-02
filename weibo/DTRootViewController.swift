@@ -15,7 +15,7 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
     var tabBarViewController : RDVTabBarController?
     var tabBarIcons   = [["首页","tabbar_home","tabbar_home_selected"],
                          ["消息","tabbar_message_center","tabbar_message_center_selected"],
-                         ["","tabbar_compose_background_icon_add","tabbar_compose_background_icon_addselect"],
+                         ["","tabbar_compose_icon_add","tabbar_compose_icon_add_highlighted"],
                          ["发现","tabbar_discover","tabbar_discover_selected"],
                          ["我","tabbar_profile","tabbar_profile_selected"]]
   
@@ -52,15 +52,21 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
         i = 0;
         for item in tabBar.items! {
             let subArr = tabBarIcons[i]
-            let unelectImageName = subArr[1];
+            let unselectImageName = subArr[1];
             let selectImageName  = subArr[2];
-            let unelectImage = UIImage.init(named: unelectImageName)
+            let unelectImage = UIImage.init(named: unselectImageName)
             let selectImage = UIImage.init(named: selectImageName)
             item.unselectedTitleAttributes = [NSForegroundColorAttributeName:UIColor().navigationTitleColor];
             item.selectedTitleAttributes = [NSForegroundColorAttributeName:UIColor().navigationTitleColor];
             item.title      = subArr[0]
             item.titlePositionAdjustment = UIOffsetMake(0, 2)
             item.setFinishedSelectedImage(selectImage, unselectedImage: unelectImage)
+            
+            if i == 2 {
+                let unselectBgImage = UIImage.init(named: "tabbar_compose_button")
+                let selectBgImage   = UIImage.init(named: "tabbar_compose_button_highlighted")
+                item.setBackgroundSelectedImage(selectBgImage, unselectedImage: unselectBgImage)
+            }
             item.setNeedsDisplay()
             i += 1;
         }

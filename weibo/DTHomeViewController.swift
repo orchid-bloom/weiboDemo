@@ -17,6 +17,10 @@ class DTHomeViewController: DTPaginationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tome"
+        
+        view.addSubview(refreshTableView)
+        addHeadRefresh()
+        refreshTableView.mj_header.beginRefreshing()        
     }
     override func styleNavBar (){
         super.styleNavBar()
@@ -48,7 +52,7 @@ class DTHomeViewController: DTPaginationViewController {
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
         guard    let navBackImage          = UIImage.init(named: "navigationbar_icon_radar"),
-                 let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_highlighted") else {
+                 let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_aperture") else {
                 return UIBarButtonItem()
         }
         let barButtonItem = UIBarButtonItem.creatBarButtonItem(image: navBackImage, lightImage: navBackImageHighlight, title: nil, target: self, action: #selector(customItemClicked))
@@ -60,4 +64,20 @@ class DTHomeViewController: DTPaginationViewController {
     override func customItemClicked() {
         
     }
+    // MARK: - tableView
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "123")
+        if !(cell != nil) {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "123")
+        }
+        cell?.textLabel?.text = String.init(format: "第%d行", indexPath.row)
+        return cell!
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
 }

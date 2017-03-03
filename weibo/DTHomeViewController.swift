@@ -14,16 +14,25 @@ class DTHomeViewController: DTPaginationViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if (self.rdv_tabBarController?.tabBarHidden)! {
+            self.rdv_tabBarController?.setTabBarHidden(false, animated: true)
+        }
         styleNavBar()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            self.rdv_tabBarController?.setTabBarHidden(true, animated: true)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tome"
-        
     }
     override func loadData() {
         
     }
+
     override func styleNavBar (){
         super.styleNavBar()
     }
@@ -43,7 +52,7 @@ class DTHomeViewController: DTPaginationViewController {
         return newNavBar
     }
     override func backNavigationItem()-> (UIBarButtonItem) {
-        guard    let navBackImage          = UIImage.init(named: "navigationbar_friendattention"),
+        guard    let navBackImage     = UIImage.init(named: "navigationbar_friendattention"),
             let navBackImageHighlight = UIImage.init(named: "navigationbar_friendattention_highlighted") else {
                 return UIBarButtonItem()
         }
@@ -51,7 +60,7 @@ class DTHomeViewController: DTPaginationViewController {
         return barButtonItem
     }
     override func addCustomRightBarButtonItem()-> (UIBarButtonItem)  {
-        guard    let navBackImage          = UIImage.init(named: "navigationbar_icon_radar"),
+        guard    let navBackImage     = UIImage.init(named: "navigationbar_icon_radar"),
             let navBackImageHighlight = UIImage.init(named: "navigationbar_icon_radar_aperture") else {
                 return UIBarButtonItem()
         }
@@ -68,6 +77,12 @@ class DTHomeViewController: DTPaginationViewController {
 }
 // MARK: - UITableView delegate
 extension DTHomeViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView .deselectRow(at: indexPath, animated: true)
+        let vc = DTMicroblogDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }

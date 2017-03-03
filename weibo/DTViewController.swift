@@ -28,7 +28,6 @@ class DTViewController: UIViewController {
         customHeadView?.addSubview((self?.customNavigationBar)!)
         return customHeadView!
         }()
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true

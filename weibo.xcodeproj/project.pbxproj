@@ -18,6 +18,7 @@
 		A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39545D31E64581000F331B6 /* DTNavigationController.swift */; };
 		B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */; };
 		B6294D291E651BD4007C4945 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D281E651BD4007C4945 /* Constant.swift */; };
+		B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F6F721E690DE800765525 /* UIView+Extension.swift */; };
 		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
@@ -72,6 +73,7 @@
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 		B6294D281E651BD4007C4945 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B63F6F721E690DE800765525 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
 		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
 		B6602A5E1E641BCA00A8197B /* DTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */,
 				B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */,
 				A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */,
+				B63F6F721E690DE800765525 /* UIView+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				A30243831E66EAE5002FE23E /* UIBarButtonItem+Extension.swift in Sources */,
 				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
 				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
+				B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */,
 				B6294D291E651BD4007C4945 /* Constant.swift in Sources */,
 				B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */,
 				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,

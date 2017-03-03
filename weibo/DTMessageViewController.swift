@@ -12,9 +12,17 @@ class DTMessageViewController: DTViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if (self.rdv_tabBarController?.tabBarHidden)! {
+            self.rdv_tabBarController?.setTabBarHidden(false, animated: true)
+        }
         styleNavBar()
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            self.rdv_tabBarController?.setTabBarHidden(true, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息"

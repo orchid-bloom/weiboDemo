@@ -8,28 +8,23 @@
 
 import UIKit
 
-class DTNavigationController: UINavigationController {
+class DTNavigationController: UINavigationController ,UIGestureRecognizerDelegate{
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let target = self.interactivePopGestureRecognizer?.delegate
+        let pan = UIPanGestureRecognizer(target: target, action: Selector("handleNavigationTransition:"))
+        view.addGestureRecognizer(pan)
+        self.interactivePopGestureRecognizer?.isEnabled = false
+        pan.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if self.viewControllers.count > 1 {
+            return true
+        }else{
+            return false
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

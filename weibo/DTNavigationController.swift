@@ -14,7 +14,7 @@ class DTNavigationController: UINavigationController ,UIGestureRecognizerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         let target = self.interactivePopGestureRecognizer?.delegate
-        let pan = UIPanGestureRecognizer(target: target, action: Selector("handleNavigationTransition:"))
+        let pan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
         view.addGestureRecognizer(pan)
         self.interactivePopGestureRecognizer?.isEnabled = false
         pan.delegate = self

@@ -18,6 +18,7 @@
 		A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39545D31E64581000F331B6 /* DTNavigationController.swift */; };
 		B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */; };
 		B6294D291E651BD4007C4945 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D281E651BD4007C4945 /* Constant.swift */; };
+		B62AA9B71E6A9CBE00AB0028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62AA9B51E6A9CBE00AB0028 /* LaunchScreen.storyboard */; };
 		B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F6F721E690DE800765525 /* UIView+Extension.swift */; };
 		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
@@ -30,7 +31,6 @@
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
 		B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */; };
 		B6FD0A811E602A2900DAB8D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */; };
-		B6FD0A841E602A2900DAB8D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */; };
 		B6FD0A8F1E602A2900DAB8D2 /* weiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A8E1E602A2900DAB8D2 /* weiboTests.swift */; };
 		B6FD0A9A1E602A2900DAB8D2 /* weiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A991E602A2900DAB8D2 /* weiboUITests.swift */; };
 		BEB36EAA37747AC2D708B9EF /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D54A8C3F493D5DFB4D3B9E /* Pods_weibo.framework */; };
@@ -73,6 +73,7 @@
 		B35BE8F42A932FD16ECB66F7 /* Pods-weiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboUITests/Pods-weiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 		B6294D281E651BD4007C4945 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B62AA9B61E6A9CBE00AB0028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B63F6F721E690DE800765525 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
 		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B6FD0A831E602A2900DAB8D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6FD0A851E602A2900DAB8D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6FD0A8A1E602A2900DAB8D2 /* weiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A8E1E602A2900DAB8D2 /* weiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weiboTests.swift; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 				B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */,
 				B6602A601E641BEE00A8197B /* DTRootViewController.swift */,
 				A39545D31E64581000F331B6 /* DTNavigationController.swift */,
+				B62AA9B51E6A9CBE00AB0028 /* LaunchScreen.storyboard */,
 				B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */,
-				B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */,
 				B6FD0A851E602A2900DAB8D2 /* Info.plist */,
 			);
 			name = AppDelegate;
@@ -575,8 +575,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6FD0A841E602A2900DAB8D2 /* LaunchScreen.storyboard in Resources */,
 				B6FD0A811E602A2900DAB8D2 /* Assets.xcassets in Resources */,
+				B62AA9B71E6A9CBE00AB0028 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,10 +795,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6FD0A821E602A2900DAB8D2 /* LaunchScreen.storyboard */ = {
+		B62AA9B51E6A9CBE00AB0028 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6FD0A831E602A2900DAB8D2 /* Base */,
+				B62AA9B61E6A9CBE00AB0028 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

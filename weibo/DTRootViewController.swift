@@ -19,7 +19,6 @@ class DTRootViewController: DTViewController ,RDVTabBarControllerDelegate{
                          ["发现","tabbar_discover","tabbar_discover_selected"],
                          ["我","tabbar_profile","tabbar_profile_selected"]]
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -19,6 +19,8 @@
 		B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */; };
 		B6294D291E651BD4007C4945 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6294D281E651BD4007C4945 /* Constant.swift */; };
 		B62AA9B71E6A9CBE00AB0028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62AA9B51E6A9CBE00AB0028 /* LaunchScreen.storyboard */; };
+		B62AA9B91E6A9DEF00AB0028 /* DTNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AA9B81E6A9DEF00AB0028 /* DTNetworkConfig.swift */; };
+		B62AA9BD1E6AAA5000AB0028 /* DTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AA9BC1E6AAA5000AB0028 /* DTRequest.swift */; };
 		B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F6F721E690DE800765525 /* UIView+Extension.swift */; };
 		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
@@ -74,6 +76,8 @@
 		B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 		B6294D281E651BD4007C4945 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B62AA9B61E6A9CBE00AB0028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B62AA9B81E6A9DEF00AB0028 /* DTNetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNetworkConfig.swift; sourceTree = "<group>"; };
+		B62AA9BC1E6AAA5000AB0028 /* DTRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRequest.swift; sourceTree = "<group>"; };
 		B63F6F721E690DE800765525 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
 		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 				B6602A5E1E641BCA00A8197B /* DTViewController.swift */,
 				A35579E41E6476B3004063DD /* DTBaseTableViewViewController.swift */,
 				B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */,
+				B62AA9B81E6A9DEF00AB0028 /* DTNetworkConfig.swift */,
+				B62AA9BC1E6AAA5000AB0028 /* DTRequest.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -639,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		80BC3208DDF9F285FFF6259D /* [CP] Check Pods Manifest.lock */ = {
@@ -654,7 +660,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9566C8A73906508B8B1CC031 /* [CP] Copy Pods Resources */ = {
@@ -699,7 +705,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DFDB4160004DE0E6B6CE9F48 /* [CP] Copy Pods Resources */ = {
@@ -739,6 +745,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62AA9B91E6A9DEF00AB0028 /* DTNetworkConfig.swift in Sources */,
 				A337233A1E64620A00435E51 /* DTFineViewController.swift in Sources */,
 				B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */,
 				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
@@ -759,6 +766,7 @@
 				B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */,
 				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
+				B62AA9BD1E6AAA5000AB0028 /* DTRequest.swift in Sources */,
 				A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

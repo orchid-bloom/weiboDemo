@@ -18,10 +18,9 @@ enum RefreshType {
 class DTPaginationViewController: DTViewController {
 
     lazy var refreshTableView :UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - TabBarHeight), style: .plain)
+        let tableView = UITableView(frame: CGRect(x: 0, y: CustomHeaderHeight, width: ScreenWidth, height: ScreenHeight - TabBarHeight - CustomHeaderHeight), style: .plain)
         tableView.delegate   = self
         tableView.dataSource = self
-        self.refreshTableViewRegister()
         return tableView
     }()
     lazy var dataList         = [Any]()
@@ -30,7 +29,9 @@ class DTPaginationViewController: DTViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        automaticallyAdjustsScrollViewInsets = false
         view.addSubview(refreshTableView)
+        refreshTableViewRegister()
         addHeadRefresh()
         refreshTableView.mj_header.beginRefreshing()
         loadData()

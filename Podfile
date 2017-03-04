@@ -14,6 +14,7 @@ target 'weibo' do
   pod 'SDWebImage', '~> 4.0.0'
   pod 'EDColor', '~> 1.0.0'
   pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
 
   # Pods for weibo
 

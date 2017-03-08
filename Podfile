@@ -15,7 +15,8 @@ target 'weibo' do
   pod 'EDColor', '~> 1.0.0'
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
-
+  pod 'SnapKit', '~> 3.2.0'
+  pod 'Kingfisher'
   # Pods for weibo
 
   target 'weiboTests' do

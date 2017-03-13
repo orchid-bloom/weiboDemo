@@ -34,7 +34,7 @@ class DTFineViewController: DTViewController {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
         newNavBar.barTintColor = UIColor.white
         let newItem   = UINavigationItem()
-        
+        self.customStatusBar.backgroundColor = UIColor.white
         let btn = UIButton.creatButton(frame: CGRect(x: 10, y: 5, width: ScreenWidth - 20, height: 25), title: "大家正在搜", titleColor:UIColor(hexString: "#939393") , lightTitleColor: UIColor(hexString: "#939393"), image: UIImage.init(named: "message_choosecontact_search"), lightImage: UIImage.init(named: "message_choosecontact_search"), target: self, action: #selector(navigationSearchClick(sender:)))
         btn.backgroundColor = UIColor(hexString: "#E3E4E6")
         btn.titleLabel?.font = DTFont.getFontWithFontType(.DTFontTypeE)

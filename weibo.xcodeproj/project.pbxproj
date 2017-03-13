@@ -30,6 +30,7 @@
 		B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */; };
 		B6796BD11E66A3870022F9D6 /* DTAppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */; };
 		B6796BD31E66A4790022F9D6 /* DTFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BD21E66A4790022F9D6 /* DTFont.swift */; };
+		B6ED9CBD1E71334C006F59F9 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
 		B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */; };
 		B6FD0A811E602A2900DAB8D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FD0A801E602A2900DAB8D2 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTAppStyle.swift; sourceTree = "<group>"; };
 		B6796BD21E66A4790022F9D6 /* DTFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTFont.swift; sourceTree = "<group>"; };
+		B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		B6FD0A761E602A2900DAB8D2 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */,
 				A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */,
 				B63F6F721E690DE800765525 /* UIView+Extension.swift */,
+				B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
 				B62AA9BD1E6AAA5000AB0028 /* DTRequest.swift in Sources */,
+				B6ED9CBD1E71334C006F59F9 /* UIButton+Extention.swift in Sources */,
 				A39545D41E64581000F331B6 /* DTNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

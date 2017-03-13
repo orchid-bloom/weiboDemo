@@ -23,7 +23,6 @@ class DTFineViewController: DTViewController {
             self.rdv_tabBarController?.setTabBarHidden(true, animated: true)
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Fine"
@@ -33,15 +32,18 @@ class DTFineViewController: DTViewController {
     }
     override func createCustomNavigationBar ()->(UINavigationBar) {
         let newNavBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: ScreenWidth, height: 44))
-        newNavBar.barTintColor = UIColor().navigationColor
+        newNavBar.barTintColor = UIColor.white
         let newItem   = UINavigationItem()
-        let titleLabel = UILabel()
-        titleLabel.text = self.title
-        titleLabel.font = DTFont.getFontWithFontType(.DTFontTypeA)
-        titleLabel.textColor = UIColor().navigationTitleColor
-        titleLabel.sizeToFit()
-        newItem.titleView = titleLabel
+        
+        let btn = UIButton.creatButton(frame: CGRect(x: 10, y: 5, width: ScreenWidth - 20, height: 25), title: "大家正在搜", titleColor:UIColor(hexString: "#939393") , lightTitleColor: UIColor(hexString: "#939393"), image: UIImage.init(named: "message_choosecontact_search"), lightImage: UIImage.init(named: "message_choosecontact_search"), target: self, action: #selector(navigationSearchClick(sender:)))
+        btn.backgroundColor = UIColor(hexString: "#E3E4E6")
+        btn.titleLabel?.font = DTFont.getFontWithFontType(.DTFontTypeE)
+        btn.layer.cornerRadius = 4;
+        newItem.titleView = btn
         newNavBar.items = [newItem]
         return newNavBar
+    }
+    func navigationSearchClick(sender:Any) {
+        
     }
 }

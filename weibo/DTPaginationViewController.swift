@@ -63,6 +63,7 @@ extension DTPaginationViewController {
         beforeStartRefresh()
         page.pageIndex = 1
         requestWithPageIndex(pageIndex: page.pageIndex, refreshType: .HeaderRefresh)
+        loadData()
     }
     //加载更多
     func footRefreshing(sender :Any) {

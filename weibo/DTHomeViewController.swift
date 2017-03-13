@@ -30,7 +30,8 @@ class DTHomeViewController: DTPaginationViewController {
         self.title = "Tome"
     }
     override func loadData() {
-        DTRequest().get(urlString: "https://api.weibo.com/2/statuses/home_timeline.json?", parameters: ["access_token":"2.00U3k_2Emo2IOC0bbe51af67FVgY_D"]) { (_, msg, JSON) in
+        DTRequest.homeTimeLine { (dataList) in
+            self.dataList = (dataList as? Array)!
             self.refreshTableView.mj_header.endRefreshing()
         }
     }

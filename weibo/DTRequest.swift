@@ -21,8 +21,27 @@ enum DTRequestStatus : Int{
  - return    msg :提示信息
  */
 typealias CompletionHandler = (_ status:DTRequestStatus?,_ msg:String?,_ result:JSON?) -> ()
+typealias Response            = (_ result:Any?) -> ()
 
 class DTRequest {
+
+    var accessToken:String? = "2.00U3k_2Emo2IOC0bbe51af67FVgY_D"
+    /**
+     - name  request
+     */
+    func request(method:HTTPMethod, urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler) {
+        setNetworkActivityIndicator(true)
+        var parameters  = parameters
+        if (parameters == nil) {
+            parameters = [String:String]()
+        }
+        parameters!["access_token"] = accessToken
+        if method == .get {
+            get(urlString: urlString, parameters: parameters, completionHandler: completionHandler)
+        }else{
+            post(urlString: urlString, parameters: parameters, completionHandler: completionHandler)
+        }
+    }
     /**
      - name      get请求
      - parameter urlString:URL
@@ -30,9 +49,8 @@ class DTRequest {
      - parameter completionHandler:回调
      - return    JSON
      */
-    func get(urlString:String,parameters:[String:Any]?,completionHandler: @escaping CompletionHandler)  {
-        setNetworkActivityIndicator(true)
-        Alamofire.request(urlString, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
+    func get(urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler)  {
+        Alamofire.request(String.requestUrl(urlString), method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
             self.handle(response: response, completionHandler: completionHandler)
         }
     }
@@ -43,9 +61,8 @@ class DTRequest {
      - parameter completionHandler:回调
      - return    JSON
      */
-    func post(urlString:String,parameters:[String:Any]?,completionHandler: @escaping CompletionHandler) {
-        setNetworkActivityIndicator(true)
-        Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
+    func post(urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler) {
+        Alamofire.request(String.requestUrl(urlString), method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
             self.handle(response: response, completionHandler: completionHandler)
         }
     }

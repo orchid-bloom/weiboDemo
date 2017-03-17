@@ -34,19 +34,12 @@ class DTPaginationViewController: DTViewController {
         refreshTableViewRegister()
         addHeadRefresh()
         refreshTableView.mj_header.beginRefreshing()
-        loadData()
     }
-}
-
+    
 // MARK: - Refresh Method
-extension DTPaginationViewController {
     //子类重写修改属性
     func refreshTableViewRegister() {
         
-    }
-    //加载数据
-    func loadData() {
-
     }
     //添加下拉刷新
     func addHeadRefresh() {
@@ -63,7 +56,6 @@ extension DTPaginationViewController {
         beforeStartRefresh()
         page.pageIndex = 1
         requestWithPageIndex(pageIndex: page.pageIndex, refreshType: .HeaderRefresh)
-        loadData()
     }
     //加载更多
     func footRefreshing(sender :Any) {
@@ -75,7 +67,7 @@ extension DTPaginationViewController {
         
     }
     //子类需要重写这个方法
-    func requestWithPageIndex(pageIndex:Int,refreshType:RefreshType) {
+    public func requestWithPageIndex(pageIndex:Int,refreshType:RefreshType) {
         loadWithPage(pageIndex: pageIndex, requestType: refreshType)
     }
     /**
@@ -113,7 +105,6 @@ extension DTPaginationViewController {
         
     }
 }
-
 // MARK: - UITableView delegate
 extension DTPaginationViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

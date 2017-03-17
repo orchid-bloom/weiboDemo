@@ -26,7 +26,6 @@
 		B62CF3351E769EF90005C4EE /* DTHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3341E769EF90005C4EE /* DTHomeTableViewCell.swift */; };
 		B62CF3371E769F3D0005C4EE /* DTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3361E769F3D0005C4EE /* DTModel.swift */; };
 		B62CF3391E769FD60005C4EE /* DTHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3381E769FD60005C4EE /* DTHomeModel.swift */; };
-		B62CF33B1E76A58F0005C4EE /* DTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF33A1E76A58F0005C4EE /* DTUser.swift */; };
 		B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F6F721E690DE800765525 /* UIView+Extension.swift */; };
 		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
@@ -36,6 +35,10 @@
 		B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */; };
 		B6796BD11E66A3870022F9D6 /* DTAppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */; };
 		B6796BD31E66A4790022F9D6 /* DTFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BD21E66A4790022F9D6 /* DTFont.swift */; };
+		B68B27DD1E7A425600BAF18D /* UIDesignMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B27DC1E7A425600BAF18D /* UIDesignMacro.swift */; };
+		B68B27DF1E7A427D00BAF18D /* RequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B27DE1E7A427D00BAF18D /* RequestApi.swift */; };
+		B68B27E11E7A429F00BAF18D /* VendorMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B27E01E7A429F00BAF18D /* VendorMacro.swift */; };
+		B68B27E31E7A42AE00BAF18D /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68B27E21E7A42AE00BAF18D /* DataTypes.swift */; };
 		B6ED9CBD1E71334C006F59F9 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */; };
 		B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */; };
 		B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD0A7B1E602A2900DAB8D2 /* ViewController.swift */; };
@@ -90,7 +93,6 @@
 		B62CF3341E769EF90005C4EE /* DTHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeTableViewCell.swift; sourceTree = "<group>"; };
 		B62CF3361E769F3D0005C4EE /* DTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTModel.swift; sourceTree = "<group>"; };
 		B62CF3381E769FD60005C4EE /* DTHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeModel.swift; sourceTree = "<group>"; };
-		B62CF33A1E76A58F0005C4EE /* DTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTUser.swift; sourceTree = "<group>"; };
 		B63F6F721E690DE800765525 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
 		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
@@ -101,6 +103,10 @@
 		B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTAppStyle.swift; sourceTree = "<group>"; };
 		B6796BD21E66A4790022F9D6 /* DTFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTFont.swift; sourceTree = "<group>"; };
+		B68B27DC1E7A425600BAF18D /* UIDesignMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDesignMacro.swift; sourceTree = "<group>"; };
+		B68B27DE1E7A427D00BAF18D /* RequestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestApi.swift; sourceTree = "<group>"; };
+		B68B27E01E7A429F00BAF18D /* VendorMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorMacro.swift; sourceTree = "<group>"; };
+		B68B27E21E7A42AE00BAF18D /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		B6FD0A761E602A2900DAB8D2 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD0A791E602A2900DAB8D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +287,10 @@
 			isa = PBXGroup;
 			children = (
 				B6294D281E651BD4007C4945 /* Constant.swift */,
+				B68B27DC1E7A425600BAF18D /* UIDesignMacro.swift */,
+				B68B27DE1E7A427D00BAF18D /* RequestApi.swift */,
+				B68B27E01E7A429F00BAF18D /* VendorMacro.swift */,
+				B68B27E21E7A42AE00BAF18D /* DataTypes.swift */,
 			);
 			name = Macro;
 			sourceTree = "<group>";
@@ -330,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				B62CF3381E769FD60005C4EE /* DTHomeModel.swift */,
-				B62CF33A1E76A58F0005C4EE /* DTUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -779,20 +788,23 @@
 				B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */,
 				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
 				B6796BD11E66A3870022F9D6 /* DTAppStyle.swift in Sources */,
+				B68B27DF1E7A427D00BAF18D /* RequestApi.swift in Sources */,
 				B6430EC91E6576E400615B2E /* DTPage.swift in Sources */,
 				B62CF3351E769EF90005C4EE /* DTHomeTableViewCell.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
 				A337233C1E64621500435E51 /* DTMyViewController.swift in Sources */,
 				B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */,
 				B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */,
+				B68B27E11E7A429F00BAF18D /* VendorMacro.swift in Sources */,
 				B62CF3331E76988A0005C4EE /* DTRequest+Extention.swift in Sources */,
+				B68B27DD1E7A425600BAF18D /* UIDesignMacro.swift in Sources */,
 				B6796BD31E66A4790022F9D6 /* DTFont.swift in Sources */,
 				B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */,
 				B6796BBE1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift in Sources */,
 				B62CF32C1E7685640005C4EE /* String+Extention.swift in Sources */,
 				A30243831E66EAE5002FE23E /* UIBarButtonItem+Extension.swift in Sources */,
 				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
-				B62CF33B1E76A58F0005C4EE /* DTUser.swift in Sources */,
+				B68B27E31E7A42AE00BAF18D /* DataTypes.swift in Sources */,
 				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
 				B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */,
 				B6294D291E651BD4007C4945 /* Constant.swift in Sources */,

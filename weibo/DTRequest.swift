@@ -25,7 +25,7 @@ typealias Response            = (_ result:Any?) -> ()
 
 class DTRequest {
 
-    var accessToken:String? = "2.00U3k_2Emo2IOC0bbe51af67FVgY_D"
+    var accessToken:String?
     /**
      - name  request
      */

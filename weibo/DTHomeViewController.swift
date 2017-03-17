@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mantle
 
 fileprivate let cellID = "cellID"
 
@@ -29,10 +30,14 @@ class DTHomeViewController: DTPaginationViewController {
         super.viewDidLoad()
         self.title = "Tome"
     }
-    override func loadData() {
+   override func requestWithPageIndex(pageIndex: Int,refreshType: RefreshType) {
         DTRequest.homeTimeLine { (dataList) in
-            self.dataList = (dataList as? Array)!
             self.refreshTableView.mj_header.endRefreshing()
+            guard let dataList = dataList as? [Any],
+                let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
+                    return;
+            }
+            self.dataList += temp
         }
     }
     override func styleNavBar (){

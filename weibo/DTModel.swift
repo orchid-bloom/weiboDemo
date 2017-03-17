@@ -9,6 +9,6 @@
 import UIKit
 import Mantle
 
-class DTModel: MTLModel {
+class DTModel: MTLModel{
 
 }

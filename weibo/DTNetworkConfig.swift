@@ -36,7 +36,7 @@ public final class DTNetworkConfig: NSObject {
         case .SeverRELEASE:
             baseUrl = ""
        }
-        baseUrl = "https://api.weibo.com"
+        baseUrl = BASE_URL
         return baseUrl!
     }
 }

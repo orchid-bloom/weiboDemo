@@ -34,11 +34,15 @@ class DTPaginationViewController: DTViewController {
         refreshTableViewRegister()
         addHeadRefresh()
         refreshTableView.mj_header.beginRefreshing()
+        loadData()
     }
     
 // MARK: - Refresh Method
     //子类重写修改属性
     func refreshTableViewRegister() {
+        
+    }
+    func loadData() {
         
     }
     //添加下拉刷新

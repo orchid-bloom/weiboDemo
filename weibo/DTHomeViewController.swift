@@ -30,7 +30,18 @@ class DTHomeViewController: DTPaginationViewController {
         super.viewDidLoad()
         self.title = "Tome"
     }
-   override func requestWithPageIndex(pageIndex: Int,refreshType: RefreshType) {
+    override func loadData() {
+        DTRequest.homeTimeLine(requestArgument: ["table":"news","classid":"0","query":"isgood","pageSize":3]) {(dataList) in
+            guard let dataList = dataList as? [Any],
+                let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
+                    return;
+            }
+            let headView = DTHomeTableHeadView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 120))
+            headView.dataArray = temp as? [DTHomeModel]
+            self.refreshTableView.tableHeaderView = headView
+        }
+    }
+    override func requestWithPageIndex(pageIndex: Int,refreshType: RefreshType) {
     DTRequest.homeTimeLine(requestArgument: ["table":"news","classid":"0","pageIndex":pageIndex,"pageSize":page.pageSize]) {(dataList) in
         guard let dataList = dataList as? [Any],
             let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
@@ -90,7 +101,6 @@ extension DTHomeViewController {
         tableView .deselectRow(at: indexPath, animated: true)
         let vc = DTMicroblogDetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count

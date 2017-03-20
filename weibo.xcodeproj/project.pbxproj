@@ -26,6 +26,7 @@
 		B62CF3351E769EF90005C4EE /* DTHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3341E769EF90005C4EE /* DTHomeTableViewCell.swift */; };
 		B62CF3371E769F3D0005C4EE /* DTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3361E769F3D0005C4EE /* DTModel.swift */; };
 		B62CF3391E769FD60005C4EE /* DTHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CF3381E769FD60005C4EE /* DTHomeModel.swift */; };
+		B63145D21E7FBFD300C6937C /* DTHomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63145D11E7FBFD300C6937C /* DTHomeTableHeadView.swift */; };
 		B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F6F721E690DE800765525 /* UIView+Extension.swift */; };
 		B6430EC61E6575B900615B2E /* DTPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */; };
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
@@ -93,6 +94,7 @@
 		B62CF3341E769EF90005C4EE /* DTHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeTableViewCell.swift; sourceTree = "<group>"; };
 		B62CF3361E769F3D0005C4EE /* DTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTModel.swift; sourceTree = "<group>"; };
 		B62CF3381E769FD60005C4EE /* DTHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeModel.swift; sourceTree = "<group>"; };
+		B63145D11E7FBFD300C6937C /* DTHomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTHomeTableHeadView.swift; sourceTree = "<group>"; };
 		B63F6F721E690DE800765525 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B6430EC51E6575B900615B2E /* DTPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPaginationViewController.swift; sourceTree = "<group>"; };
 		B6430EC81E6576E400615B2E /* DTPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTPage.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				B62CF3341E769EF90005C4EE /* DTHomeTableViewCell.swift */,
+				B63145D11E7FBFD300C6937C /* DTHomeTableHeadView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				B6294D271E650FB4007C4945 /* MBProgressHUD+Extension.swift in Sources */,
 				B68B27E11E7A429F00BAF18D /* VendorMacro.swift in Sources */,
 				B62CF3331E76988A0005C4EE /* DTRequest+Extention.swift in Sources */,
+				B63145D21E7FBFD300C6937C /* DTHomeTableHeadView.swift in Sources */,
 				B68B27DD1E7A425600BAF18D /* UIDesignMacro.swift in Sources */,
 				B6796BD31E66A4790022F9D6 /* DTFont.swift in Sources */,
 				B6FD0A7C1E602A2900DAB8D2 /* ViewController.swift in Sources */,

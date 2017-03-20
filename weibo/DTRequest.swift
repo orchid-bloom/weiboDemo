@@ -29,7 +29,7 @@ class DTRequest {
     /**
      - name  request
      */
-    func request(method:HTTPMethod, urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler) {
+    func request(method:HTTPMethod, urlString:String,parameters:[String:Any]?,completionHandler: @escaping CompletionHandler) {
         setNetworkActivityIndicator(true)
         var parameters  = parameters
         if (parameters == nil) {
@@ -49,7 +49,7 @@ class DTRequest {
      - parameter completionHandler:回调
      - return    JSON
      */
-    func get(urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler)  {
+    func get(urlString:String,parameters:[String:Any]?,completionHandler: @escaping CompletionHandler)  {
         Alamofire.request(String.requestUrl(urlString), method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
             self.handle(response: response, completionHandler: completionHandler)
         }
@@ -61,7 +61,7 @@ class DTRequest {
      - parameter completionHandler:回调
      - return    JSON
      */
-    func post(urlString:String,parameters:[String:String]?,completionHandler: @escaping CompletionHandler) {
+    func post(urlString:String,parameters:[String:Any]?,completionHandler: @escaping CompletionHandler) {
         Alamofire.request(String.requestUrl(urlString), method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {(response) in
             self.handle(response: response, completionHandler: completionHandler)
         }

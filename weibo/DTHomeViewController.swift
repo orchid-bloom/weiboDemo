@@ -31,14 +31,16 @@ class DTHomeViewController: DTPaginationViewController {
         self.title = "Tome"
     }
    override func requestWithPageIndex(pageIndex: Int,refreshType: RefreshType) {
-        DTRequest.homeTimeLine { (dataList) in
-            self.refreshTableView.mj_header.endRefreshing()
-            guard let dataList = dataList as? [Any],
-                let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
-                    return;
-            }
-            self.dataList += temp
+    DTRequest.homeTimeLine(requestArgument: ["table":"news","classid":"0","pageIndex":pageIndex,"pageSize":page.pageSize]) {(dataList) in
+        guard let dataList = dataList as? [Any],
+            let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
+                return;
         }
+        self.endRefreshingWithType(refreshType: refreshType)
+        self.addDataBeforeWithRefreshType(refreshType: refreshType, dataArray: dataList)
+        self.dataList += temp
+        self.refreshTableView.reloadData()
+    }
     }
     override func styleNavBar (){
         super.styleNavBar()
@@ -91,7 +93,7 @@ extension DTHomeViewController {
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dataList.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "123")

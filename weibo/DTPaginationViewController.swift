@@ -64,7 +64,11 @@ class DTPaginationViewController: DTViewController {
     }
     //结束刷新
     func endRefreshingWithType(refreshType:RefreshType)  {
-        
+        if refreshType == .HeaderRefresh {
+            refreshTableView.mj_header.endRefreshing()
+        }else{
+            refreshTableView.mj_footer.endRefreshing()
+        }
     }
     //子类需要重写这个方法
     public func requestWithPageIndex(pageIndex:Int,refreshType:RefreshType) {
@@ -88,7 +92,7 @@ class DTPaginationViewController: DTViewController {
     func addDataBeforeWithRefreshType(refreshType:RefreshType,dataArray:[Any])  {
         if refreshType == .HeaderRefresh  {
             dataList.removeAll()
-            if dataArray.count > page.pageSize {
+            if dataArray.count >= page.pageSize {
                 page.addPageIndex()
                 addFooterRefresh()
             }else{

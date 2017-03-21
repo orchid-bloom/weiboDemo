@@ -36,7 +36,7 @@ class DTHomeViewController: DTPaginationViewController {
                 let temp = try? MTLJSONAdapter.models(of: DTHomeModel.self, fromJSONArray: dataList) else {
                     return;
             }
-            let headView = DTHomeTableHeadView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 120))
+            let headView = DTHomeTableHeadView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
             headView.dataArray = temp as? [DTHomeModel]
             self.refreshTableView.tableHeaderView = headView
         }

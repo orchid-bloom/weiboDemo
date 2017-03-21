@@ -12,7 +12,7 @@ import Kingfisher
 class DTHomeTableHeadView: UIView,UIScrollViewDelegate{
 
     lazy var scrollView :UIScrollView = {()->UIScrollView in
-        let scroll = UIScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 120))
+        let scroll = UIScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
         scroll.showsVerticalScrollIndicator = false
         scroll.showsHorizontalScrollIndicator = false
         scroll.bounces = false
@@ -51,19 +51,28 @@ class DTHomeTableHeadView: UIView,UIScrollViewDelegate{
             return;
         }
         scrollView.delegate = self
-        scrollView.contentSize = CGSize(width: ScreenWidth * CGFloat(dataArray.count), height: 120)
+        scrollView.contentSize = CGSize(width: ScreenWidth * CGFloat(dataArray.count), height: 150)
         var i = CGFloat(0.0)
         for model in dataArray {
             guard let mo = model.titlepic, let url = URL(string: mo) else {
                 i += 1
                 return
             }
-            let imageView = UIImageView(frame: CGRect(x: i * ScreenWidth, y: 0, width: ScreenWidth, height: 120))
+            let imageView = UIImageView(frame: CGRect(x: i * ScreenWidth, y: 0, width: ScreenWidth, height: 150))
                 imageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, _, _, _) in
                     
                 })
-            i += 1
             scrollView.addSubview(imageView)
+            let bgView = UIView(frame: CGRect(x: i * ScreenWidth, y: 150-25, width: ScreenWidth, height: 25))
+            bgView.backgroundColor = UIColor.black
+            bgView.alpha = 0.3
+            scrollView.addSubview(bgView)
+            let abstractLabel = UILabel(frame:CGRect(x: 10, y: 0, width: ScreenWidth-20, height: 25))
+            abstractLabel.font = DTFont.getFontWithFontType(.DTFontTypeC)
+            abstractLabel.textColor = UIColor.white
+            abstractLabel.text = model.title
+            bgView.addSubview(abstractLabel)
+            i += 1
         }
         scrollView.contentOffset = CGPoint(x: 0, y: 0)
         addTimer()

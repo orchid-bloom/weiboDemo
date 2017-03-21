@@ -21,7 +21,7 @@ enum DTRequestStatus : Int{
  - return    msg :提示信息
  */
 typealias CompletionHandler = (_ status:DTRequestStatus?,_ msg:String?,_ result:JSON?) -> ()
-typealias Response            = (_ result:Any?) -> ()
+typealias Response          = (_ result:Any?) -> ()
 
 class DTRequest {
 
@@ -93,6 +93,4 @@ class DTRequest {
         }
     }
 }
-extension DTRequest {
 
-}

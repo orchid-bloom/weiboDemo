@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 let LINE_SPACING         =    7.0 /* 行间距 */
 let TEXT_LINE_SPACING    =    4.0 /* 行间距 */
 let ELEMENT_SPACING      =    9.0 /* 元素间隔 */

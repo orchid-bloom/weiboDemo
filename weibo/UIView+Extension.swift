@@ -30,5 +30,36 @@ extension UIView {
     }
     var centerPosition :CGPoint {
         return self.center
-    }    
+    }
+    
+    /**
+     *  sourceView
+     *  @return UIViewController
+     */
+    func findViewController(sourceView:UIView?)->(UIViewController?) {
+        
+        guard let sourceView =  sourceView else {
+            return nil
+        }
+        var target = sourceView as UIResponder?
+        
+        while target != nil {
+            target = target?.next
+            if (target? .isKind(of: UIViewController.self))! {
+                break;
+            }
+        }
+        return target as? UIViewController
+    }
+    
+    ///rotate Animation
+    func rotateViewAnimation()  {
+        let tmpSpeed:TimeInterval = 0.5
+        let rotationAnimation     = CABasicAnimation(keyPath: "transform.rotation.z");
+        rotationAnimation.fromValue = 0
+        rotationAnimation.toValue   = (Double.pi/4)*100000
+        rotationAnimation.duration  = tmpSpeed*100000
+        rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        self.layer .add(rotationAnimation, forKey: nil)
+    }
 }

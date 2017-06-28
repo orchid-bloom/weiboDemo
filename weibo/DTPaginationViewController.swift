@@ -123,7 +123,7 @@ extension DTPaginationViewController : UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "")
-        if !(cell != nil) {
+        if (cell != nil) {
             cell = UITableViewCell()
         }
         return cell!

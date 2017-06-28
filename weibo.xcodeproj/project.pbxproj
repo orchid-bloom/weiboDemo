@@ -32,6 +32,9 @@
 		B6430EC91E6576E400615B2E /* DTPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6430EC81E6576E400615B2E /* DTPage.swift */; };
 		B6602A5F1E641BCA00A8197B /* DTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A5E1E641BCA00A8197B /* DTViewController.swift */; };
 		B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6602A601E641BEE00A8197B /* DTRootViewController.swift */; };
+		B674DA551F0352F10022B3D6 /* UITableView+Extenion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674DA541F0352F10022B3D6 /* UITableView+Extenion.swift */; };
+		B674DA571F0381BC0022B3D6 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674DA561F0381BC0022B3D6 /* Dictionary+Extension.swift */; };
+		B674DA591F03888A0022B3D6 /* DTFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674DA581F03888A0022B3D6 /* DTFileHelper.swift */; };
 		B6796BBE1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BBD1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift */; };
 		B6796BCE1E667FC20022F9D6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */; };
 		B6796BD11E66A3870022F9D6 /* DTAppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */; };
@@ -101,6 +104,9 @@
 		B6602A5E1E641BCA00A8197B /* DTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTViewController.swift; sourceTree = "<group>"; };
 		B6602A601E641BEE00A8197B /* DTRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTRootViewController.swift; sourceTree = "<group>"; };
 		B6602A661E64204400A8197B /* RDVTabBarControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RDVTabBarControllerSwift.framework; path = "../Library/Developer/Xcode/DerivedData/weibo-eipsfnqkcbehpydzawziuncfseac/Build/Products/Debug-iphonesimulator/RDVTabBarControllerSwift/RDVTabBarControllerSwift.framework"; sourceTree = "<group>"; };
+		B674DA541F0352F10022B3D6 /* UITableView+Extenion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extenion.swift"; sourceTree = "<group>"; };
+		B674DA561F0381BC0022B3D6 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B674DA581F03888A0022B3D6 /* DTFileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTFileHelper.swift; sourceTree = "<group>"; };
 		B6796BBD1E667DE30022F9D6 /* DTMicroblogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMicroblogDetailViewController.swift; sourceTree = "<group>"; };
 		B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B6796BD01E66A3870022F9D6 /* DTAppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTAppStyle.swift; sourceTree = "<group>"; };
@@ -311,12 +317,15 @@
 		B6602A5D1E641AF300A8197B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */,
 				B6796BCD1E667FC20022F9D6 /* Bundle+Extension.swift */,
 				A30243821E66EAE5002FE23E /* UIBarButtonItem+Extension.swift */,
 				B63F6F721E690DE800765525 /* UIView+Extension.swift */,
 				B6ED9CBC1E71334C006F59F9 /* UIButton+Extention.swift */,
+				B674DA541F0352F10022B3D6 /* UITableView+Extenion.swift */,
+				B6294D261E650FB4007C4945 /* MBProgressHUD+Extension.swift */,
 				B62CF32B1E7685640005C4EE /* String+Extention.swift */,
+				B674DA561F0381BC0022B3D6 /* Dictionary+Extension.swift */,
+				B674DA581F03888A0022B3D6 /* DTFileHelper.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -792,6 +801,7 @@
 				A35579E51E6476B3004063DD /* DTBaseTableViewViewController.swift in Sources */,
 				B6796BD11E66A3870022F9D6 /* DTAppStyle.swift in Sources */,
 				B68B27DF1E7A427D00BAF18D /* RequestApi.swift in Sources */,
+				B674DA551F0352F10022B3D6 /* UITableView+Extenion.swift in Sources */,
 				B6430EC91E6576E400615B2E /* DTPage.swift in Sources */,
 				B62CF3351E769EF90005C4EE /* DTHomeTableViewCell.swift in Sources */,
 				B6602A611E641BEE00A8197B /* DTRootViewController.swift in Sources */,
@@ -808,6 +818,7 @@
 				B62CF32C1E7685640005C4EE /* String+Extention.swift in Sources */,
 				A30243831E66EAE5002FE23E /* UIBarButtonItem+Extension.swift in Sources */,
 				A33723361E6461E200435E51 /* DTMessageViewController.swift in Sources */,
+				B674DA571F0381BC0022B3D6 /* Dictionary+Extension.swift in Sources */,
 				B68B27E31E7A42AE00BAF18D /* DataTypes.swift in Sources */,
 				A33723381E6461FD00435E51 /* DTPushViewController.swift in Sources */,
 				B63F6F731E690DE800765525 /* UIView+Extension.swift in Sources */,
@@ -816,6 +827,7 @@
 				A33723341E6461D100435E51 /* DTHomeViewController.swift in Sources */,
 				B6FD0A7A1E602A2900DAB8D2 /* AppDelegate.swift in Sources */,
 				B62AA9BD1E6AAA5000AB0028 /* DTRequest.swift in Sources */,
+				B674DA591F03888A0022B3D6 /* DTFileHelper.swift in Sources */,
 				B62CF3371E769F3D0005C4EE /* DTModel.swift in Sources */,
 				B62CF3391E769FD60005C4EE /* DTHomeModel.swift in Sources */,
 				B6ED9CBD1E71334C006F59F9 /* UIButton+Extention.swift in Sources */,

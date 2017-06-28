@@ -15,5 +15,4 @@ extension String {
     static func requestUrl(_ url:String?)-> String{
     return String().baseUrl + "/" + url!
     }
-    
 }

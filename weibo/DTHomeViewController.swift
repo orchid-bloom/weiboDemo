@@ -29,6 +29,14 @@ class DTHomeViewController: DTPaginationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tome"
+        
+        let str = "qwertyuiop"
+        let str1 = "qwe"
+        
+      let l = str.containsString(subString: str1)
+        
+        
+        
     }
     override func loadData() {
         DTRequest.homeTimeLine(requestArgument: ["table":"news","classid":"0","query":"isgood","pageSize":3]) {(dataList) in

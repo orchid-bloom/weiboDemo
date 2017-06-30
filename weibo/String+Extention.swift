@@ -9,10 +9,57 @@
 import Foundation
 
 extension String {
-    var baseUrl:String {
-        return DTNetworkConfig.shared.baseUrl!
+
+    /// Checking if String is Empty
+    ///
+    /// - Returns: Bool
+    func isBlank() -> Bool {
+        return self.removeWhiteSpacesFromString() == "" ? true:false
     }
-    static func requestUrl(_ url:String?)-> String{
-    return String().baseUrl + "/" + url!
+    /// Checking if String is Empty or "(null)"
+    ///
+    /// - Returns: Bool
+    func isValid() -> Bool {
+        return (self.removeWhiteSpacesFromString() == "" || self == "(null)") ? false : true
     }
+    /// remove white spaces from String
+    ///
+    /// - Returns: String
+    func removeWhiteSpacesFromString() -> String {
+     return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+    /// Checking if String is empty or nil
+    ///
+    /// - Parameter string: string
+    /// - Returns: Bool
+    static func isValid(string:String?)->Bool {
+        guard let string = string else {
+            return false
+        }
+        return string.removeWhiteSpacesFromString().isValid()
+    }
+    
+    
+    func countNumberOfWords() -> Int {
+        let scanner = Scanner.init(string: self)
+        let whiteSpace = CharacterSet.whitespaces
+        var count = 0
+        
+        while  scanner.scanCharacters(from: whiteSpace, into: nil){
+            count += count
+        }
+        return count
+    }
+    
+    func containsString(subString:String) -> Bool {
+        var range = (self.range(of: subString)) as? _NSRange
+        return range?.location == NSNotFound ? false :true
+    }
+    func isBeginsWith(string:String) -> Bool {
+        
+    }
+    func isEndssWith(string:String) -> Bool {
+        
+    }
+    
 }

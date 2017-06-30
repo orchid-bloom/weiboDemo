@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.5.0)
   - EDColor (1.0.1)
   - FCUUID (1.1.5):
     - UICKeyChainStore (~> 1.0.5)
-  - Kingfisher (3.5.0)
+  - Kingfisher (3.10.2)
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
@@ -33,10 +33,10 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   EDColor: 91d127cd67d7c1d3862846fb11ef4b3851151bfa
   FCUUID: a9108673d64a4585a4bb89ea5d4c69b002edadb3
-  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
+  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -49,4 +49,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c30ff93254772bd2fc07d5b535e4816c87cf0aa9
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

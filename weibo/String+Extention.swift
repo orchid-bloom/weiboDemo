@@ -50,16 +50,4 @@ extension String {
         }
         return count
     }
-    
-    func containsString(subString:String) -> Bool {
-        var range = (self.range(of: subString)) as? _NSRange
-        return range?.location == NSNotFound ? false :true
-    }
-    func isBeginsWith(string:String) -> Bool {
-        
-    }
-    func isEndssWith(string:String) -> Bool {
-        
-    }
-    
 }

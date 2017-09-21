@@ -11,7 +11,8 @@ import UIKit
 class DTViewController: UIViewController {
 
     //自定义导航栏
-    lazy var customNavigationBar :UINavigationBar = {[weak self] ()->UINavigationBar in
+    lazy var customNavigationBar: UINavigationBar = {[weak self] ()->UINavigationBar in
+      
         let navigationBar = self?.createCustomNavigationBar()
         return navigationBar!;
         }()

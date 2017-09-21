@@ -17,6 +17,7 @@ target 'weibo' do
   pod 'SwiftyJSON'
   pod 'SnapKit', '~> 3.2.0'
   pod 'Kingfisher'
+  pod 'HandyJSON'
   # Pods for weibo
 
   target 'weiboTests' do

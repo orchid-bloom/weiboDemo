@@ -23,7 +23,7 @@ enum DTTitleFontType {
 
 class DTFont: UIFont {
 
-    class func getFontWithFontType( _ fontType:DTFontType) -> UIFont {
+    class func getFontWithFontType(_ fontType: DTFontType) -> UIFont {
         var font:UIFont
         switch fontType {
         case .DTFontTypeA:
